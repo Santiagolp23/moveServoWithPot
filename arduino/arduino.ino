@@ -10,6 +10,7 @@ int average = 0;                // the average
 int pos;  
 
 void setup() {
+  Serial.begin(9600);
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
@@ -34,8 +35,11 @@ void loop() {
 
   // calculate the average:
   pos = total / numReadings;
+  Serial.println(pos);
+
   // maps the pot min max values to the ones accepted by the pot:
   pos = map(pos, 0, 1023, 0, 180); 
   myservo.write(pos);
+  delay(5); // for stability
 
 }
