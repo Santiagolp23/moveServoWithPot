@@ -7,10 +7,6 @@ int readings[numReadings];      // the readings from the analog input
 int readIndex = 0;              // the index of the current reading
 int total = 0;                  // the running total
 int average = 0;                // the average
-<<<<<<< HEAD
-=======
-int inputPin = A0;
->>>>>>> 9c7194f1c49dde69ee5129a74a4a2be5c14e1b94
 int pos;  
 
 void setup() {
